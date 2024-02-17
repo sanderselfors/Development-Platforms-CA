@@ -44,4 +44,4 @@ The `cars` table stores information about cars. Each car has the following attri
 
 ### Author
 
-- @sanderselfors
+- Ssander Selfors
