@@ -61,6 +61,28 @@ app.get("/products", (req, res) => {
   }
 });
 
+app.get("/products/:id", (req, res) => {
+  const { id } = req.params;
+
+  db.get("SELECT * FROM products WHERE id = ?", [id], (err, row) => {
+    if (err) {
+      console.error("Error running sql: " + err);
+      res.status(500).json({ message: "Internal Server Error" });
+      return;
+    }
+
+    if (!row) {
+      res.status(404).json({ message: `Product with ID ${id} not found` });
+      return;
+    }
+
+    res.json({
+      message: "Product details",
+      data: row,
+    });
+  });
+});
+
 app.post("/products", (req, res) => {
   const { name, price } = req.body;
 
@@ -128,6 +150,28 @@ app.get("/cars", (req, res) => {
       });
     });
   }
+});
+
+app.get("/cars/:id", (req, res) => {
+  const { id } = req.params;
+
+  db.get("SELECT * FROM cars WHERE id = ?", [id], (err, row) => {
+    if (err) {
+      console.error("Error running sql: " + err);
+      res.status(500).json({ message: "Internal Server Error" });
+      return;
+    }
+
+    if (!row) {
+      res.status(404).json({ message: `Car with ID ${id} not found` });
+      return;
+    }
+
+    res.json({
+      message: "Car details",
+      data: row,
+    });
+  });
 });
 
 app.post("/cars", (req, res) => {
