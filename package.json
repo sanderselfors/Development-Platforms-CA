@@ -7,9 +7,8 @@
     "start": "node src/index.js",
     "dev": "nodemon src/index.js",
     "lint": "eslint --fix src",
-    "test": "jest",
-    "test:e2e:open": "cypress open",
-    "test:e2e:run": "cypress run"
+    "test": "npm run test-e2e",
+    "test-e2e": "cypress run"
   },
   "keywords": [],
   "author": "CJ R. <cj@null.computer> (https://w3cj.now.sh)",
