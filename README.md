@@ -1,4 +1,4 @@
-# Project Name
+# Development Platforms CA
 
 ## Description
 
@@ -44,4 +44,4 @@ The `cars` table stores information about cars. Each car has the following attri
 
 ### Author
 
-- Ssander Selfors
+- Sander Selfors
