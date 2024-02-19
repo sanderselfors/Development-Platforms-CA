@@ -69,4 +69,4 @@ Overall, the assignment was an effective learning experience, combining theoreti
 
 ### Author
 
-- Sander Selfors
+- @sanderselfors
